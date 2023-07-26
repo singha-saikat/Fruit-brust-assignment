@@ -41,6 +41,12 @@
       tailwind.config = {
         theme: {
           extend: {
+            backgroundImage: {
+              "slider-1": "url('./images/banner1.png')",
+              "slider-2": "url('./images/banner2.png')",
+              "slider-3": "url('./images/banner3.png')",
+              "slider-4": "url('./images/banner4.png')",
+            },
             colors: {
               navbar: "#F85559",
             },
@@ -51,7 +57,7 @@
   </head>
   <body class="font-lato">
     <header>
-        <!-- navbar design start -->
+      <!-- navbar design start -->
       <nav>
         <div class="max-w-screen-xl mx-auto p-2 md:p-4">
           <div class="navbar md:bg-navbar rounded-[500px] px-12">
@@ -62,9 +68,9 @@
                 <li><a>Shop</a></li>
                 <li><a>All Fruits</a></li>
               </ul>
-              
-              <div class="dropdown absolute  -right-12 md:-right-0 md:hidden">
-                <label tabindex="0" class="btn btn-ghost btn-circle ">
+
+              <div class="dropdown absolute left-32  md:left-0 md:hidden">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -84,28 +90,32 @@
                   tabindex="0"
                   class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
-                <li><a>Home</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Shop</a></li>
-                <li><a>All Fruits</a></li>
-                <li><div class="form-control relative">
-                    <input
-                      type="text"
-                      placeholder="Search"
-                      class="input rounded-3xl w-24 md:w-auto pl-5"
-                    />
-                    <i
-                      class="fa-solid fa-magnifying-glass absolute top-0 right-0 mt-5 mr-3"
-                    ></i>
-                  </div></li>
+                  <li><a>Home</a></li>
+                  <li><a>About Us</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>All Fruits</a></li>
+                  <li>
+                    <div class="form-control relative">
+                      <input
+                        type="text"
+                        placeholder="Search"
+                        class="input rounded-3xl w-24 md:w-auto pl-5"
+                      />
+                      <i
+                        class="fa-solid fa-magnifying-glass absolute top-0 right-0 mt-5 mr-3"
+                      ></i>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class=" navbar-center absolute md:static left-3 p-2 md:p-0  md:pt-0 md:left-0 gap-3">
-              <img src="./images/logo.png" alt="logo" />
-              <h3 class="md:text-white text-xl md:text-3xl">Fruit Burst</h3>
+            <div
+              class="navbar-center  h-full  md:left-0 p-2 md:p-0 md:pt-0 md:left-0 gap-3"
+            >
+              <img  class="w-10 sm:w-16 "  src="./images/logo.png" alt="logo" />
+              <h3 class="md:text-white text-base sm:text-2xl md:text-3xl">Fruit Burst</h3>
             </div>
-            <div class=" absolute md:static navbar-end">
+            <div class="absolute md:static navbar-end">
               <div class="flex-none gap-2 hidden md:inline">
                 <div class="form-control relative">
                   <input
@@ -123,6 +133,94 @@
         </div>
       </nav>
       <!-- navbar design ends here -->
+
+      <!-- banner section starts here -->
+      <section class=" max-w-screen-xl mx-auto sm:p-2 md:p-4">
+        <div class="carousel  md:h-96 w-full">
+          <!-- card-1 -->
+          <div
+            id="slide1"
+            class="carousel-item bg-slider-1 bg-cover relative  w-full"
+          >
+            <div class="flex w-full justify-center md:mt-10">
+              <div class="text-white text-center space-y-5">
+                <h2 class="text-2xl md:text-4xl">
+                  Exotic tastes at your doorstep
+                </h2>
+                <p class="w-5/4">We supply highly quality organic products</p>
+                <button class="btn btn-error">Shop Now</button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- card-2 -->
+          <div
+            id="slide2"
+            class="carousel-item bg-slider-2 bg-cover relative w-full"
+          >
+            <div class="flex w-full justify-center md:mt-10">
+              <div class="text-white text-center space-y-5">
+                <h2 class="text-2xl md:text-4xl">
+                  Exotic tastes at your doorstep
+                </h2>
+                <p>We supply highly quality organic products</p>
+                <button class="btn btn-error">Shop Now</button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div
+            id="slide3"
+            class="carousel-item bg-slider-3 bg-cover relative w-full"
+          >
+            <div class="flex w-full justify-center md:mt-10">
+              <div class="text-white text-center space-y-5">
+                <h2 class="text-2xl md:text-4xl">
+                  Exotic tastes at your doorstep
+                </h2>
+                <p>We supply highly quality organic products</p>
+                <button class="btn btn-error">Shop Now</button>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- card-4 -->
+          <div id="slide4" class="carousel-item  bg-slider-4 bg-cover  relative w-full">
+            <div class="flex w-full justify-center md:mt-10">
+                <div class="text-white text-center space-y-5">
+                  <h2 class="text-2xl md:text-4xl">
+                    Exotic tastes at your doorstep
+                  </h2>
+                  <p>We supply highly quality organic products</p>
+                  <button class="btn btn-error">Shop Now</button>
+                </div>
+              </div>
+            
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
